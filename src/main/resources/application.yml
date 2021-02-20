@@ -1,0 +1,13 @@
+server:
+  port: 9052
+spring:
+  application:
+    name: likesRepo
+  data:
+      cassandra:
+        local-datacenter: datacenter1
+        schema-action: CREATE_IF_NOT_EXISTS
+        keyspace-name: uts
+        contact-points: cass1
+        port: 9042
+
