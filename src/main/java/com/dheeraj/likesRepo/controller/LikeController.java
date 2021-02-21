@@ -55,4 +55,9 @@ public class LikeController {
         return this.service.findPaginatedLikesByParentId(parentId, likeRequest);
     }
 
+    @GetMapping("/count/{parentId}")
+    public Mono<Long> getCountByParentId(@PathVariable String parentId){
+        return this.reactiveRepo.countByParentId(parentId);
+    }
+
 }
